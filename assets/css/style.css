@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;500&family=Oxygen:wght@300;400;500&display=swap');
+
+.inline-block {
+    display: inline-block;
+}
+
+.bg-home-page {
+    background-image: 
+    radial-gradient(farthest-corner circle at 50% 50% in oklab, 
+      oklch(28% 0.50 340) 0%, oklch(4% 0.44 200) 50%, oklch(22% 0.13 63) 100%);
+}
+
+.home-page-container {
+    min-height: 1000px;
+}
+
+header {
+    color: #fafafa;
+}
+
+#navbar-menu {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+    margin: 0px;
+}
+
+.navbar-border {
+    width: 98%;
+    height: 2px;
+    background-color: #fafafa;
+    border-radius: 12px;
+}
+
+.navbar-link {
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: #fafafa;
+}
+
+.page-heading {
+    font-family: "Oxygen", sans-serif;
+    text-align: center; 
+    padding-top: 2rem;
+}
+
+
+
