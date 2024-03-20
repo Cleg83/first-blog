@@ -1,17 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;500&family=Oxygen:wght@300;400;500&display=swap');
 
+@keyframes growText {
+    from {
+      font-size: 0.5em; /* starting size */
+      opacity: 0; /* starting opacity, if desired */
+    }
+    to {
+      font-size: 1em; /* final size */
+      opacity: 1; /* final opacity, if desired */
+    }
+  }
+
 .inline-block {
     display: inline-block;
 }
 
 .bg-home-page {
     background-image: 
-    radial-gradient(farthest-corner circle at 50% 50% in oklab, 
-      oklch(28% 0.50 340) 0%, oklch(4% 0.44 200) 50%, oklch(22% 0.13 63) 100%);
+    linear-gradient(
+      to right in oklab, 
+      oklch(5% 0.40 35) 9% 15%, oklch(3% 0.25 19) 42% 55%, oklch(5% 0.40 35) 90% 117%
+    );
 }
 
 .home-page-container {
-    min-height: 1000px;
+    height: 100vh;
+    position: relative;
 }
 
 header {
@@ -34,7 +48,25 @@ header {
     border-radius: 12px;
 }
 
-.navbar-link {
+.header-btn {
+    font-family: "Barlow", sans-serif;
+    font-size: 1.25rem;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: #fafafa;
+    border: 3px solid #98fffd;
+    background-image: none;
+    transition: background-image 250ms ease-in-out, color 250ms ease-in-out;
+    -webkit-transition: background-image 250ms ease-in-out, color 250ms ease-in-out;
+    -moz-transition: background-image 250ms ease-in-out, color 250ms ease-in-out;
+    -o-transition: background-image 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+.btn-text {
+    /* padding: 10px 5px 10px 5px; */
+}
+
+/* .navbar-link {
     font-family: "Barlow", sans-serif;
     font-weight: 500;
     font-size: 1.25rem;
@@ -42,11 +74,131 @@ header {
     color: #fafafa;
 }
 
+.navbar-link:hover {
+    color: #98fffd; 
+} */
+
 .page-heading {
     font-family: "Oxygen", sans-serif;
     text-align: center; 
     padding-top: 2rem;
+    padding-bottom: 1rem;
 }
+
+#content-box {
+    margin: 0 auto;
+    padding-top: 150px;
+    color: #fafafa;
+    font-family: "Oxygen", sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75vw;
+    text-align: center;
+}
+
+/* #dropdown {
+    text-align: center;
+}
+ 
+select {
+    width: 20vw;
+    height: 2rem;
+    border: 3px solid #98fffd;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #000000;
+    font-family: "Oxygen", sans-serif;
+    background-color: #fafafa; 
+    background-image: none;
+    transition: background-image 250ms ease-in-out, color 250ms ease-in-out;
+    -webkit-transition: background-image 250ms ease-in-out, color 250ms ease-in-out;
+    -moz-transition: background-image 250ms ease-in-out, color 250ms ease-in-out;
+    -o-transition: background-image 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+.header-btn:hover,
+select:hover,
+select:focus,
+select:active {
+    background-color: none;
+    background-image: 
+    linear-gradient(
+      to right in oklab, 
+      oklch(5% 0.40 35) 9% 15%, oklch(3% 0.25 19) 42% 55%, oklch(5% 0.40 35) 90% 117%
+    );
+    color: #fafafa;
+}
+
+#go-button {
+    display: block;
+    margin: 0 auto;
+    width: 20vw;
+    height: 2rem;
+    border: 3px solid #98fffd;
+    border-radius: 0 0 12px 12px;
+    color: #000000;
+    font-family: "Oxygen", sans-serif;
+    background-color: #fafafa; 
+    background-image: none;
+    transition: background-image 250ms ease-in-out, color 250ms ease-in-out;
+    -webkit-transition: background-image 250ms ease-in-out, color 250ms ease-in-out;
+    -moz-transition: background-image 250ms ease-in-out, color 250ms ease-in-out;
+    -o-transition: background-image 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+#go-button:hover {
+    background-color: none;
+    background-image: 
+    linear-gradient(
+      to right in oklab, 
+      oklch(5% 0.40 35) 9% 15%, oklch(3% 0.25 19) 42% 55%, oklch(5% 0.40 35) 90% 117%
+    );
+    color: #fafafa;
+}
+
+#lyrics-container {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 250px;
+    color: #fafafa;
+  }
+
+  #lyrics-container.animate {
+    animation: growText 1s ease-in-out; /* adjust duration and timing function as needed */
+
+/* #home-page-info {
+    width: 40%;
+    float: left;
+    margin-top: 3rem;
+    margin-left: 2rem;
+    color: #fafafa;
+    font-family: "Oxygen", sans-serif;
+    border: 2px solid #98fffd;
+    border-radius: 12px;
+    padding-left: 1rem;
+}
+
+#info-heading {
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.text-link {
+    text-decoration: none;
+    color: #98fffd;
+}
+
+.text-link:hover {
+    color: #3c6ed8;
+}
+
+#home-page-text {
+    padding-bottom: 1.5rem;
+}  */
 
 
 
